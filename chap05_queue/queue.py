@@ -8,6 +8,13 @@ class Queue:
         self.theQueue.append(item)
 
     def Remove(self):
+        """
+        Retrieves the value of the next item in the queue
+        without removing it from the queue.
+
+        Raises:
+            IndexError: If the queue is empty.
+        """
         item = self.theQueue[0]
         del self.theQueue[0]
         return item
@@ -16,6 +23,13 @@ class Queue:
         return len(self) == 0
 
     def Peek(self):
+        """
+        Retrieves the value of the next item in the queue
+        without removing it from the queue.
+
+        Raises:
+            IndexError: If the queue is empty.
+        """
         return self.theQueue[0]
 
     def __len__(self):
